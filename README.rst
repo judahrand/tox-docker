@@ -51,6 +51,10 @@ The ``[docker:container-name]`` section may contain the following directives:
     This value is passed directly to Docker, and may be of any of the forms
     that Docker accepts in eg ``docker run``.
 
+``command``
+    A string defining the command to run in the container. If this is not set
+    then the default ``CMD`` set by the image will run.
+
 ``privileged``
     A boolean (``true || false``) to set `runtime privilege
     <https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities>`__.
