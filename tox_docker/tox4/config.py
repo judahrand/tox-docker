@@ -116,6 +116,7 @@ def parse_container_config(docker_config: DockerConfigSet) -> ContainerConfig:
     return ContainerConfig(
         name=docker_config.name,
         image=docker_config["image"],
+        command=docker_config["command"],
         stop=docker_config.name not in docker_config._conf.options.docker_dont_stop,
         privileged=docker_config["privileged"],
         environment=docker_config["environment"],
